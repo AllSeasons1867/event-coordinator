@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a public event posting and RSVP application. Think of it like meetup, but with a less haphazard interface. 
 
-Things you may want to cover:
+Clone or download the app onto your own machine. Use the terminal on your machine to 'cd' into the home directory, and then enter the following commands:
 
-* Ruby version
+* bundle
 
-* System dependencies
+* rails db:migrate
 
-* Configuration
+* rails db:seed
 
-* Database creation
+* rails s
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then visit localhost:3000 in your web browser to view the project. 
