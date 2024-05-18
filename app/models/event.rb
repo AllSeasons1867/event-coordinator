@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  has_many :registrations
 
   validates :name, :location, presence: true
 
