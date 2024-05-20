@@ -12,6 +12,19 @@ class RegistrationsController < ApplicationController
     def create 
         @event = Event.find(parms[:event_id])
 
-        @registration = @event.registration.new(params[:registration])
+        @registration = @event.registration.new(registration_params)
+
+        if @registration.save
+            redirect_to event_registrations_url(@event),
+            notice: "Thanks for registering!"
+        else 
+            render :new, status: :unprocessable_entity
+        end
     end 
+
+    private 
+    def registration_params
+        params.require(:registration).permit(:name, :email, :how_heard)
+    end
+
 end
