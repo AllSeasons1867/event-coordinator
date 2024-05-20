@@ -12,4 +12,5 @@ module EventsHelper
     event.starts_at.strftime("%B %d at %I:%M %P")
   end
 
+  
 end
