@@ -8,4 +8,10 @@ class RegistrationsController < ApplicationController
         @event = Event.find(params[:event_id])
         @registration = @event.registrations.new
     end
+
+    def create 
+        @event = Event.find(parms[:event_id])
+
+        @registration = @event.registration.new(params[:registration])
+    end 
 end
